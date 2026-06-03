@@ -10826,7 +10826,7 @@ textarea.form-control-lg {
   }
 }
 body {
-  background-image: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url("../assets/img/bg.jpg");
+  background-image: linear-gradient(rgba(47, 23, 15, 0.5), rgba(47, 23, 15, 0.8)), url("../assets/img/ppp.png");
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -10937,7 +10937,7 @@ p {
 .cta {
   padding-top: 5rem;
   padding-bottom: 5rem;
-  background-color: rgba(230, 167, 86, 0.9);
+  background-color: rgb(87 53 40 / 0.9);
 }
 .cta .cta-inner {
   position: relative;
@@ -10964,15 +10964,46 @@ p {
   position: relative;
 }
 @media (min-width: 992px) {
-  .intro .intro-img {
-    width: 75%;
-    float: right;
+  .intro {
+    position: relative;
+    width: 100%;
+    min-height: 650px;
   }
-  .intro .intro-text {
-    left: 0;
-    width: 60%;
-    margin-top: 3rem;
+
+  .intro .intro-img {
+    width: 70%;
+    height: 550px;
+
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: 12px;
+
     position: absolute;
+    right: 0;
+    top: 40px;
+
+    z-index: 1;
+  }
+
+  .intro .intro-text {
+
+    width: 45%;
+
+    position: absolute;
+
+    left: 0;
+    top: 120px;
+
+    z-index: 2;
+
+    background-color: #f8f1e7;
+
+    padding: 40px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
   }
   .intro .intro-text .intro-button {
     width: 100%;
@@ -11055,7 +11086,7 @@ p {
     margin-bottom: 10px;
 }
 
-<!--分行中-->
+/* 分行 */
 
 .site-heading-lower{
     font-family: 'Noto Sans TC', sans-serif;
@@ -11092,4 +11123,90 @@ span.section-heading-lower{
     font-size: 18px;
     font-weight: 400 !important;
     letter-spacing: 2px;
+}
+
+/* 按鈕：底框 */
+#mainNav .navbar-nav .nav-item .nav-link {
+  display: inline-block;
+  padding: 10px 22px;
+  margin: 0 14px;
+
+  color: #fff7e8 !important;
+  font-size: 20px;
+  letter-spacing: 2px;
+
+  background-color: rgba(255, 239, 210, 0.08);
+  border: 1px solid transparent;
+  border-radius: 14px;
+
+  transition: all 0.3s ease;
+}
+
+/* 滑鼠移過去 */
+#mainNav .navbar-nav .nav-item .nav-link:hover {
+
+  background-color: rgba(255, 239, 210, 0.22);
+
+  border: 1px solid rgba(255, 239, 210, 0.55);
+
+  box-shadow: 0 0 12px rgba(255, 239, 210, 0.2);
+
+  transform: translateY(-2px);
+}
+
+.intro {
+  position: relative;
+}
+
+.intro-img {
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+.intro-img:hover {
+  transform: scale(1.02);
+}
+
+.intro-text {
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* 愛心 */
+.love-btn {
+  background-color: #d8a06d;
+  color: #432f2f;
+  border: none;
+  padding: 15px 35px;
+  border-radius: 15px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.love-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.heart {
+  position: fixed;
+  color: pink;
+  font-size: 24px;
+  animation: floatUp 2s linear forwards;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-150px) scale(1.8);
+    opacity: 0;
+  }
 }

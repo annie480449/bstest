@@ -16,7 +16,7 @@
     <body>
         <header>
             <h1 class="site-heading text-center text-faded d-none d-lg-block">
-                <span class="site-heading-upper">LITTLE MOMENTS, BIG LOVE</span>
+                <span class="site-heading-upper">LITTLE MOMENTS   BIG LOVE</span>
                 <span class="site-heading-lower">天天日常</span>
             </h1>
         </header>
@@ -38,7 +38,7 @@
         <section class="page-section clearfix">
             <div class="container">
                 <div class="intro">
-                    <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="assets/img/intro.jpg" alt="..." />
+                    <img class="intro-img img-fluid mb-3 mb-lg-0 rounded"src="assets/img/flower.jpg"/>
                     <div class="intro-text left-0 text-center bg-faded p-5 rounded">
                         <h2 class="section-heading mb-4">
                             <span class="section-heading-upper">2025.09.04</span>
@@ -52,7 +52,7 @@
                             我到現在都還記得，當下看到的那一瞬間，心臟真的漏跳了一拍。
                             那天的我，真的好開心。
                             那一天，我第一次很真實地感受到 原來自己正被人認真地喜歡著。</p>
-                        <div class="intro-button mx-auto"><a class="btn btn-primary btn-xl" href="#!">我喜歡你</a></div>
+                        <div class="intro-button mx-auto"><button class="love-btn">我喜歡你</button></div>
                     </div>
                 </div>
             </div>
@@ -73,17 +73,41 @@
                             <p class="mb-0">有你真好。</p>
                             <p class="mb-0">和你在一起的時候，總是很安心、很快樂。</p>
                             <p class="mb-0">謝謝你願意讓我慢慢認識你，也謝謝你一直陪在我身邊。</p>
+                                <p class="mb-0">300天快樂❤❤❤</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
         <footer class="footer text-faded text-center py-5">
-            <div class="container"><p class="m-0 small">Copyright &copy; Your Website 2023</p></div>
+            <div class="container"><p class="m-0 small">*不是威威孟孟300天!!!!</p></div>
         </footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+
+        <script>
+            const button = document.querySelector('.love-btn');
+
+            button.addEventListener('click', function(e) {
+
+                for(let i = 0; i < 10; i++) {
+
+                    const heart = document.createElement('div');
+                    heart.classList.add('heart');
+                    heart.innerHTML = '❤';
+
+                    heart.style.left = e.clientX + (Math.random() * 100 - 50) + 'px';
+                    heart.style.top = e.clientY + (Math.random() * 50 - 25) + 'px';
+
+                    document.body.appendChild(heart);
+
+                    setTimeout(() => {
+                        heart.remove();
+                    }, 2000);
+                }
+            });
+        </script>
     </body>
 </html>
