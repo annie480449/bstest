@@ -11210,3 +11210,143 @@ span.section-heading-lower{
     opacity: 0;
   }
 }
+
+/* 第二頁*/
+.food-page {
+  padding: 80px 0;
+}
+
+.food-title {
+  text-align: center;
+  margin-bottom: 80px;
+  color: #f6e1c5;
+}
+
+.food-title span {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  letter-spacing: 3px;
+  font-style: italic;
+}
+
+.food-title h1 {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 64px;
+  letter-spacing: 8px;
+  margin: 10px 0 20px;
+}
+
+.food-title p {
+  font-size: 18px;
+  color: #efe6dc;
+}
+
+.food-row {
+  width: 85%;
+  margin: 0 auto 90px;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.food-row.reverse {
+  flex-direction: row-reverse;
+}
+
+.food-text {
+  width: 45%;
+  background-color: rgba(248, 241, 231, 0.92);
+  padding: 45px;
+  border-radius: 18px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.18);
+}
+
+.food-text h2 {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 36px;
+  letter-spacing: 4px;
+  margin-bottom: 25px;
+  color: #3e2f2a;
+}
+
+.food-text p {
+  font-size: 18px;
+  line-height: 2;
+  color: #5c4b43;
+}
+
+.food-img {
+  width: 55%;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.25);
+  transition: 0.3s;
+}
+
+.food-img:hover {
+  transform: scale(1.02);
+}
+
+@media screen and (max-width: 768px) {
+  .food-row,
+  .food-row.reverse {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .food-text,
+  .food-img {
+    width: 100%;
+  }
+
+  .food-img {
+    height: 300px;
+  }
+}
+
+
+/* 標題*/
+.food-title {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.food-title-box {
+  display: inline-block;
+  padding: 35px 80px;
+  border: 3px solid rgba(246,225,197,0.5);
+  border-radius: 20px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(3px);
+  position: relative;
+}
+
+.food-title-box::before,
+.food-title-box::after {
+  content: "♥";
+  position: absolute;
+  color: #f6e1c5;
+  font-size: 20px;
+}
+
+.food-title-box::before {
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.food-title-box::after {
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* 底框*/
+.food-row {
+  border: 1.5px solid rgba(246, 225, 197, 0.35);
+  border-radius: 30px;
+  padding: 45px;
+  background-color: rgb(255 148 0 / 0.06);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
