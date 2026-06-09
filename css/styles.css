@@ -10830,6 +10830,7 @@ body {
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
+  min-height: 100vh;
 }
 
 p {
@@ -10958,7 +10959,8 @@ p {
 
 .footer {
   background-color: rgba(47, 23, 15, 0.9);
-}
+    margin-top: 0;
+  }
 
 .intro {
   position: relative;
@@ -11349,4 +11351,315 @@ span.section-heading-lower{
   padding: 45px;
   background-color: rgb(255 148 0 / 0.06);
   box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+/* 第三頁*/
+.play-page {
+    padding: 80px 0 180px;
+}
+
+.play-title {
+    text-align: center;
+    color: #f6e1c5;
+    margin-bottom: 60px;
+}
+
+.play-title span {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    letter-spacing: 3px;
+    font-style: italic;
+}
+
+.play-title h1 {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 64px;
+    letter-spacing: 8px;
+    margin: 10px 0 20px;
+}
+
+.play-title p {
+    font-size: 18px;
+    color: #efe6dc;
+}
+
+/* 翻面*/
+.play-grid {
+    width: 90%;
+    max-width: 1300px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.memory-card {
+    height: 250px;
+    perspective: 1200px;
+    cursor: pointer;
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease;
+}
+
+.memory-card.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    border-radius: 18px;
+    overflow: hidden;
+
+    backface-visibility: hidden;
+}
+
+.card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-back {
+    background: #5c4338;
+    color: #f6e1c5;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+
+    transform: rotateY(180deg);
+}
+
+.card-back h3 {
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.card-back p {
+    line-height: 1.8;
+    font-size: 14px;
+}
+.memory-card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+/* 第四頁*/
+.us-page{
+  padding:100px 0;
+}
+
+.us-title{
+  text-align:center;
+  margin-bottom:60px;
+  color:#f6e1c5;
+}
+
+.us-title span{
+  font-family:'Playfair Display', serif;
+  font-size:22px;
+  letter-spacing:3px;
+  font-style:italic;
+}
+
+.us-title h1{
+  font-size:64px;
+  letter-spacing:8px;
+  margin:10px 0;
+}
+
+.us-title p{
+  color:#efe6dc;
+}
+
+.us-card{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:40px;
+  margin-bottom:70px;
+  flex-wrap:wrap;
+}
+
+.person-card{
+  width:320px;
+  background:#fdf7ef;
+  padding:35px;
+  border-radius:25px;
+  box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.person-card h3{
+  text-align:center;
+  margin-bottom:20px;
+  color:#6d4c41;
+}
+
+.person-card ul{
+  padding-left:20px;
+  line-height:2;
+}
+
+.heart-center{
+  font-size:55px;
+  color:#f6b3c8;
+}
+
+.letter-box{
+  max-width:850px;
+  margin:0 auto;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(246,225,197,.3);
+  border-radius:30px;
+  padding:50px;
+  text-align:center;
+  backdrop-filter:blur(10px);
+}
+
+.letter-box h2{
+  color:#f6e1c5;
+  margin-bottom:25px;
+}
+
+.letter-box p{
+  color:#fff;
+  line-height:2;
+  margin-bottom:20px;
+}
+
+.back-home{
+  text-align:center;
+  margin-top:50px;
+}
+
+.back-home a{
+  display:inline-block;
+  padding:14px 35px;
+  background:#f6e1c5;
+  color:#4e342e;
+  text-decoration:none;
+  border-radius:999px;
+  transition:.3s;
+}
+
+.back-home a:hover{
+  transform:translateY(-4px);
+}
+
+/* 愛心*/
+.anniversary-box {
+  text-align: center;
+  margin-top: 70px;
+  color: #f6e1c5;
+}
+
+.anniversary-box p {
+  font-size: 20px;
+  letter-spacing: 3px;
+}
+
+.big-heart {
+  font-size: 70px;
+  background: none;
+  border: none;
+  color: #f6b3c8;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.big-heart:hover {
+  transform: scale(1.2);
+  color: #ff8fb1;
+}
+
+.small-text {
+  font-size: 16px;
+  opacity: 0.8;
+}
+
+.love-popup {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(5px);
+
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  width: 500px;
+  max-width: 85%;
+  background: #fdf7ef;
+  color: #4e342e;
+  padding: 45px;
+  border-radius: 25px;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+  position: relative;
+}
+
+.popup-content h2 {
+  font-family: 'Noto Serif TC', serif;
+  margin-bottom: 25px;
+}
+
+.popup-content p {
+  line-height: 2;
+}
+
+.popup-content h3 {
+  margin-top: 25px;
+  color: #b7797c;
+  letter-spacing: 3px;
+}
+
+.close-popup {
+  position: absolute;
+  top: 15px;
+  right: 22px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+html, body {
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.play-page {
+  flex: 1;
+}
+
+.footer {
+  margin-top: auto;
 }
