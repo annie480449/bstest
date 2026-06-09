@@ -11350,3 +11350,112 @@ span.section-heading-lower{
   background-color: rgb(255 148 0 / 0.06);
   box-shadow: 0 10px 30px rgba(0,0,0,0.12);
 }
+
+/* 第三頁*/
+.play-page {
+    padding: 80px 0;
+}
+
+.play-title {
+    text-align: center;
+    color: #f6e1c5;
+    margin-bottom: 60px;
+}
+
+.play-title span {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    letter-spacing: 3px;
+    font-style: italic;
+}
+
+.play-title h1 {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 64px;
+    letter-spacing: 8px;
+    margin: 10px 0 20px;
+}
+
+.play-title p {
+    font-size: 18px;
+    color: #efe6dc;
+}
+
+/* 翻面*/
+.play-grid {
+    width: 90%;
+    max-width: 1300px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.memory-card {
+    height: 250px;
+    perspective: 1200px;
+    cursor: pointer;
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease;
+}
+
+.memory-card.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    border-radius: 18px;
+    overflow: hidden;
+
+    backface-visibility: hidden;
+}
+
+.card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-back {
+    background: #5c4338;
+    color: #f6e1c5;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+
+    transform: rotateY(180deg);
+}
+
+.card-back h3 {
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.card-back p {
+    line-height: 1.8;
+    font-size: 14px;
+}
+.memory-card:hover .card-inner {
+    transform: rotateY(180deg);
+}
